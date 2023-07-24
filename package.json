@@ -1,0 +1,19 @@
+{
+  "name": "one-portafolio",
+  "version": "1.0.0",
+  "description": "Challenge de Oracle Next Education",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicolas-Pena-Mogollon/ONE-Portafolio.git"
+  },
+  "author": "Nicolas Pena Mogollon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicolas-Pena-Mogollon/ONE-Portafolio/issues"
+  },
+  "homepage": "https://github.com/Nicolas-Pena-Mogollon/ONE-Portafolio#readme"
+}
