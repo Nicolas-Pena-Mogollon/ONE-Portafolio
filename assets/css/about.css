@@ -1,0 +1,14 @@
+.about__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h3.about__title {
+    font-weight: bold;
+    color: var(--cor-de-texto);
+}
+
+p.about__paragraph {
+    color: var(--cor-de-texto);
+}
