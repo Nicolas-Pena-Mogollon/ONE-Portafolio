@@ -1,0 +1,40 @@
+.formcontacto__contacto {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.formcontacto__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formcontacto__container {
+    width: 45vw;
+}
+
+.formcontacto__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formcontacto__input__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+
+    .formcontacto__contacto {
+        gap: 0px;
+    }
+
+    .formcontacto__container {
+        width: 100%;
+    }
+}
