@@ -1,9 +1,10 @@
-export function valida(input) {
-    const tipoDeInput = input.dataset.tipo;
-    console.log(tipoDeInput);
-    if (validadores[tipoDeInput]) {
-        validadores[tipoDeInput](input);
-    }
+/**
+ * validates the information of an input
+ * @param {Element} input an input DOM object
+ */
+export function validate(input) {
+    // Obtain the dataset
+    const inputType = input.dataset.tipo;
 
     if (input.validity.valid) {
         input.parentElement.classList.remove("input__container__invalid");
@@ -11,11 +12,11 @@ export function valida(input) {
     } else {
         input.parentElement.classList.add("input__container__invalid");
         input.parentElement.querySelector(".input__message__error").innerHTML =
-            mostrarMensajeDeError(tipoDeInput, input);
+            showMessageError(inputType, input);
     }
 }
 
-const tipoDeErrores = [
+const errorTypes = [
     "tooShort",
     "tooLong",
     "valueMissing",
@@ -24,7 +25,7 @@ const tipoDeErrores = [
     "customError",
 ];
 
-const mensajesDeError = {
+const errorMessages = {
     nombre: {
         valueMissing: "El campo nombre no puede estar vacío",
         tooShort: "El campo nombre debe tener al menos 10 caracteres",
@@ -45,41 +46,18 @@ const mensajesDeError = {
     },
 };
 
-const validadores = {
-    nacimiento: (input) => validarNacimiento(input),
-};
-
-function mostrarMensajeDeError(tipoDeInput, input) {
-    let mensaje = "";
-    tipoDeErrores.forEach((error) => {
+/**
+ * Extracts the invalidity type to assign the respective message
+ * @param {String} inputType dataset type
+ * @param {Element} input the input DOM element
+ * @returns 
+ */
+function showMessageError(inputType, input) {
+    let message = "";
+    errorTypes.forEach((error) => {
         if (input.validity[error]) {
-            console.log("dsada");
-            console.log(tipoDeInput, error);
-            console.log(input.validity[error]);
-            console.log(mensajesDeError[tipoDeInput][error]);
-            mensaje = mensajesDeError[tipoDeInput][error];
+            message = errorMessages[inputType][error];
         }
     });
-    console.log(mensaje);
-    return mensaje;
-}
-
-function validarNacimiento(input) {
-    const fechaCliente = new Date(input.value);
-    let mensaje = "";
-    if (!mayorDeEdad(fechaCliente)) {
-        mensaje = "Debes tener al menos 18 años de edad";
-    }
-
-    input.setCustomValidity(mensaje);
-}
-
-function mayorDeEdad(fecha) {
-    const fechaActual = new Date();
-    const diferenciaFechas = new Date(
-        fecha.getUTCFullYear() + 18,
-        fecha.getUTCMonth(),
-        fecha.getUTCDate()
-    );
-    return diferenciaFechas <= fechaActual;
+    return message;
 }

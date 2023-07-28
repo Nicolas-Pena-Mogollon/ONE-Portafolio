@@ -1,26 +1,26 @@
-.formcontacto__contacto {
+.contactform__contacto {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.formcontacto__text {
+.contactform__text {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.formcontacto__container {
+.contactform__container {
     width: 45vw;
 }
 
-.formcontacto__form {
+.contactform__form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.formcontacto__input__container {
+.contactform__input__container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -30,11 +30,11 @@
 /*Tablet*/
 @media (max-width: 768px) {
 
-    .formcontacto__contacto {
+    .contactform__contacto {
         gap: 0px;
     }
 
-    .formcontacto__container {
+    .contactform__container {
         width: 100%;
     }
 }
