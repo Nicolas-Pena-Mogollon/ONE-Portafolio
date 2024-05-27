@@ -27,6 +27,19 @@
     gap: 20px;
 }
 
+.contactform_subtext_container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.message__input__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
 /*Tablet*/
 @media (max-width: 768px) {
 

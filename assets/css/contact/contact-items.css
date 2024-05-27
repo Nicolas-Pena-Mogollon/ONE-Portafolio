@@ -77,6 +77,10 @@
     padding-left: 0.5rem;
 }
 
+#success__message {
+    visibility: hidden;
+}
+
 /* text area style*/
 
 .textarea__container {
@@ -84,6 +88,7 @@
 }
 
 .contactform__textarea {
+    font-family: "Raleway";
     resize: none;
     color: var(--cor-de-texto);
     box-sizing: border-box;

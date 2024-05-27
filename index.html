@@ -56,7 +56,7 @@
                 <div class="title__container">
                     <h2 class="title__bio">Mi nombre es Nicolás Peña Mogollón y soy estudiante de Ingeniería de Sistemas
                         en la Universidad El Bosque</h2>
-                    <h3 class="title__subsection">Tengo formación en Ingeniería de Sistemas y áreas afines, actualmentev
+                    <h3 class="title__subsection">Tengo formación en Ingeniería de Sistemas y áreas afines, actualmente
                         estoy participando del proyecto Oracle ONE en Alura Latam.</h3>
                     <ul class="title__network">
                         <!-- Pon los enlaces de tus redes sociales favoritas -->
@@ -299,21 +299,22 @@
                         <form class="contactform__form" name="form">
                             <div class="contactform__input__container">
                                 <div class="input__container">
-                                    <input class="contactform__input" type="text" name="nombre" placeholder="Nombre"
-                                        required pattern="^(?!.*[!@#$%^&*_=\-+]).+$" minlength="10" maxlength="50"
-                                        data-tipo="nombre">
+                                    <input id="mail__name" class="contactform__input" type="text" name="nombre"
+                                        placeholder="Nombre" required pattern="^(?!.*[!@#$%^&*_=\-+]).+$" minlength="3"
+                                        maxlength="50" data-tipo="nombre">
                                     <label class="contactform__input__label" for="nombre">Nombre</label>
                                     <span class="input__message__error">Este campo no es valido</span>
                                 </div>
                                 <div class="input__container">
-                                    <input class="contactform__input" type="email" name="email" placeholder="E-mail"
-                                        required data-tipo="email">
+                                    <input id="mail" class="contactform__input" type="email" name="email"
+                                        placeholder="E-mail" required data-tipo="email">
                                     <label class="contactform__input__label" for="email">E-mail</label>
                                     <span class="input__message__error">Este campo no es valido</span>
                                 </div>
                                 <div class="input__container">
-                                    <input class="contactform__input" type="text" name="asunto" placeholder="Assunto"
-                                        required pattern="^(?!.*[!@#$%^&*_=\-+]).+$" data-tipo="asunto">
+                                    <input id="mail__subject" class="contactform__input" type="text" name="asunto"
+                                        placeholder="Assunto" required pattern="^(?!.*[!@#$%^&*_=\-+]).+$"
+                                        data-tipo="asunto">
                                     <label class="contactform__input__label" for="asunto">Asunto</label>
                                     <span class="input__message__error">Este campo no es valido</span>
                                 </div>
@@ -324,7 +325,10 @@
                                 <label class="contactform__textarea__label" for="mensaje">Mensaje</label>
                                 <span class="input__message__error">Este campo no es valido</span>
                             </div>
-                            <button id="submitBtn" class="contactform__botao">Enviar mensaje</button>
+                            <div class="message__input__container">
+                                <button id="submitBtn" class="contactform__botao">Enviar mensaje</button>
+                                <span id="success__message">Mensaje enviado!</span>
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -9,10 +9,12 @@ export function validate(input) {
     if (input.validity.valid) {
         input.parentElement.classList.remove("input__container__invalid");
         input.parentElement.querySelector(".input__message__error").innerHTML = "";
+        return true;
     } else {
         input.parentElement.classList.add("input__container__invalid");
         input.parentElement.querySelector(".input__message__error").innerHTML =
             showMessageError(inputType, input);
+        return false;
     }
 }
 
