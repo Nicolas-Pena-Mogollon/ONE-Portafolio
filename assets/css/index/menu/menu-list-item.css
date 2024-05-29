@@ -1,0 +1,31 @@
+.menu__list__item {
+    padding: 10px;
+	border-bottom: none;
+    font-size: 16px;
+}
+
+.menu__list__item.contacto {
+    font-weight: bold;
+}
+
+.menu__title {
+    font-weight: bold;
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+    .menu__list__item {
+        display: none;
+    }
+
+    .menu__list__item.contacto {
+        display: inline;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 360px) {
+    .menu__list__item.contacto {
+        font-weight: initial;
+    }
+}

@@ -1,0 +1,22 @@
+.menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__logo_container {
+    display: flex;
+    align-items: center;
+}
+
+.menu__list {
+    display: flex;
+}
+
+/*Mobile*/
+@media (max-width: 360px) {
+    .menu__header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

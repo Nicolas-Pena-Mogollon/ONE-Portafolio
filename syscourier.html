@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/syscourier/header.css">
+    <link rel="stylesheet" href="assets/css/syscourier/items.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <title>Proyecto de Grado</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <section class="header__section">
+            <img class="experience__img head1" src="assets/img/syscourier/LogoSysCourier.png">
+            <h1 class="head2">SysCourier - Sistema de información para el seguimiento de mensajería</h1>
+            <img class="experience__img head3" src="assets/img/syscourier/DataSystemCompany.gif">
+        </section>
+        <section class="description__section text__item">
+            <p>Este proyecto de grado desarrolla una aplicación móvil para Android destinada a mejorar la eficiencia
+                y
+                agilidad del servicio de transporte de paquetería en Data System Company. Implementando la
+                metodología
+                Kanban, se identificaron las necesidades del cliente y se construyó SysCourier, una solución
+                validada
+                positivamente por los mensajeros. El proyecto incluyó la estimación de requerimientos, el diseño de
+                un
+                modelo de negocios y la evaluación del impacto del sistema, resultando en una herramienta clave para
+                optimizar las operaciones de mensajería de la empresa.</p>
+        </section>
+        <section class="context__section text__item">
+            <h2>Data System Company</h2>
+            <p>Data System Company es una empresa de logística y mensajería que ofrece servicios a nivel nacional para
+                el transporte de productos. Legalmente constituida, la empresa se especializa en implementar soluciones
+                tecnológicas que optimizan la logística integral en diversos sectores económicos. Actualmente, cuenta
+                con aproximadamente 10 mensajeros motorizados y utiliza herramientas digitales de terceros para procesos
+                como empaquetamiento, alistamiento y envío, además de monitoreo y almacenamiento de información en
+                dispositivos Android.</p>
+        </section>
+        <section class="arquitectura__section text__item diagram__container">
+            <h2>Diagrama de Arquitectura</h2>
+            <img class="diagram" src="assets/img/syscourier/diagrama_arquitectura.png" alt="Diagrama de Arquitectura">
+            <p>La arquitectura de la aplicación está organizada en capas. La capa de presentación es la aplicación
+                móvil, que interactúa con la capa de servicios de la aplicación y con un servicio FTP para la carga de
+                comprobantes al servidor de Data System Company. La capa de aplicación es una aplicación desarrollada en
+                Spring Boot, donde se ubica la capa de servicios, encargada de ofrecer servicios web a la aplicación
+                móvil. Además, está la capa de infraestructura de persistencia de datos, que gestiona las operaciones
+                con la base de datos proporcionada por la empresa beneficiaria y modificada por el equipo de desarrollo.
+                Finalmente, se encuentra la base de datos.</p>
+        </section>
+
+        <section class="despliegue__section text__item diagram__container">
+            <h2>Diagrama de Despliegue</h2>
+            <img class="diagram" src="assets/img/syscourier/diagrama_despliegue.png" alt="Diagrama de Despliegue">
+            <p>En este diagrama se evidencian los componentes principales del sistema. La aplicación móvil, desarrollada
+                en Kotlin, utiliza los servicios ofrecidos por la aplicación Spring Boot y el servicio FTP, ambos
+                alojados en un servidor Linux. La aplicación Spring Boot (backend) se conecta a la base de datos MySQL,
+                que también se encuentra en el mismo servidor Linux.</p>
+        </section>
+
+        <section class="mockups__section" id="mockups">
+            <h2>Mockups</h2>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FQU8wpD0nWBymQfMt6OLcjj%2FSysCourier%3Fnode-id%3D0-1%26t%3DPX4hHYsRkW9E9Fhu-1" allowfullscreen></iframe>
+        </section>
+
+        <section class="video__section" id="video">
+            <h2>Video de la App</h2>
+            <iframe src="assets/vid/Multimedia1.mp4" frameborder="0" allowfullscreen></iframe>
+        </section>
+    </div>
+</body>
+
+</html>
